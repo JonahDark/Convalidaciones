@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_convalidaciones_alumno_model,convalidaciones.alumno_model,model_convalidaciones_alumno_model,,1,1,1,1
+access_convalidaciones_modulo_model,convalidaciones.modulo_model,model_convalidaciones_modulo_model,,1,1,1,1
+access_convalidaciones_conva_model,convalidaciones.conva_model,model_convalidaciones_conva_model,,1,1,1,1
+access_convalidaciones_ciclo_model,convalidaciones.ciclo_model,model_convalidaciones_ciclo_model,,1,1,1,1
+access_convalidaciones_profesor_model,convalidaciones.profesor_model,model_convalidaciones_profesor_model,,1,1,1,1

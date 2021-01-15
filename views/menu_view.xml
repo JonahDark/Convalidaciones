@@ -1,0 +1,11 @@
+<odoo>
+  <data>
+    <menuitem name="Convalidaciones" id="convalidaciones.menu_root" />
+    <menuitem name="Alumnos" id="convalidaciones.menu_alumno" parent="convalidaciones.menu_root" action="convalidaciones.action_window_alumno"/>
+    <menuitem name="Modulos" id="convalidaciones.menu_modulo" parent="convalidaciones.menu_root" action="convalidaciones.action_window_modulo"/>
+    <menuitem name="Convalidaciones" id="convalidaciones.menu_conva" parent="convalidaciones.menu_root" action="convalidaciones.action_window_conva"/>
+    <menuitem name="Ciclos" id="convalidaciones.menu_ciclo" parent="convalidaciones.menu_root" action="convalidaciones.action_window_ciclo"/>
+    <menuitem name="Profesores" id="convalidaciones.menu_profesor" parent="convalidaciones.menu_root" action="convalidaciones.action_window_profesor"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,73 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="convalidaciones.listado_modulo_tree">
+      <field name="name">Listado de profesores</field>
+      <field name="model">convalidaciones.profesor_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="apellidos" />
+          <field name="dni" />
+          <field name="email" widget="email" />
+          <field name="ciclos" />
+          <field name="modulos" />
+          <field name="alumnos" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="convalidaciones.modulo_model_form">
+      <field name="name">Formulario de modulos</field>
+      <field name="model">convalidaciones.profesor_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo modulo">
+          <sheet>
+            <notebook>
+
+              <page string="Datos Personales" style="color:#a256a0">
+                <group name="1">
+                  <h2 style="color:#a256a0;">Datos Personales</h2>
+                  <field name="name" />
+                  <field name="apellidos" />
+                  <field name="dni" />
+                  <field name="email" widget="email" />
+                  <field name="numAlu" readonly="True"/>
+                </group>
+              </page>
+
+              <page string="Ciclos" style="color:#a256a0">
+                <group name="2">
+                  <h2 style="color:#a256a0;">Ciclos</h2>
+                  <field name="ciclos" />
+                </group>
+              </page>
+
+              <page string="Modulos" style="color:#a256a0">
+                <group name="3">
+                  <h2 style="color:#a256a0;">Modulos</h2>
+                  <field name="modulos" />
+                </group>
+              </page>
+
+              <page string="Alumnos" style="color:#a256a0">
+                <group name="4">
+                  <h2 style="color:#a256a0;">Alumnos</h2>
+                  <field name="alumnos" />
+                </group>
+              </page>
+
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="convalidaciones.action_window_profesor">
+      <field name="name">Listado de Profesores</field>
+      <field name="res_model">convalidaciones.profesor_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

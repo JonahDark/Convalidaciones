@@ -1,0 +1,112 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="convalidaciones.listado_alumno_tree">
+      <field name="name">Listado de alumnos</field>
+      <field name="model">convalidaciones.alumno_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="edad" />
+          <field name="localidad" />
+          <field name="provincia" />
+          <field name="email" widget="email" />
+          <field name="convalidaciones" />
+          <field name="profesores" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="convalidaciones.alumno_model_form">
+      <field name="name">Formulario de Alumno</field>
+      <field name="model">convalidaciones.alumno_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo alumno">
+          <header>
+            <button name="generarPassword" type="object" string="Generar password" class="oe_highlight" />
+          </header>
+          <sheet>
+
+            <notebook>
+              <page string="Datos Personales" style="color:#a256a0">
+                <group name="1">
+                  <h2 style="color:#a256a0;">Datos Personales</h2>
+                  <field name="foto" widget="image" style="width: 120px; height: 150px;" />
+                  <!--<field name="name" style="color:#a256a0;" />-->
+                  <label for="name" class="oe_edit_only" />
+                  <!--Crea etiqueta para name solo en modo edicion-->
+                  <h1>
+                    <field name="name" />
+                  </h1>
+                  <field name="password" />
+                  <field name="edad" />
+
+                </group>
+              </page>
+
+              <page string="Datos Adicionales" style="color:#a256a0">
+                <group name="2">
+                  <h2 style="color:#a256a0;">Datos Adicionales</h2>
+                  <field name="localidad" />
+                  <field name="provincia" />
+                  <field name="email" widget="email" />
+                </group>
+              </page>
+
+              <page string="Convalidaciones" style="color:#a256a0">
+                <group name="3">
+                  <h2 style="color:#a256a0;">Convalidaciones</h2>
+                  <field name="convalidaciones" />
+                </group>
+              </page>
+
+              <page string="Profesores" style="color:#a256a0">
+                <group name="4">
+                  <h2 style="color:#a256a0;">Profesores</h2>
+                  <field name="profesores" />
+                </group>
+              </page>
+            </notebook>
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="convalidaciones.list">
+      <field name="name">convalidaciones list</field>
+      <field name="model">convalidaciones.convalidaciones</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="convalidaciones.action_window">
+      <field name="name">convalidaciones window</field>
+      <field name="res_model">convalidaciones.convalidaciones</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.act_window" id="convalidaciones.action_window_alumno">
+      <field name="name">Listado de alumnos</field>
+      <field name="res_model">convalidaciones.alumno_model</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+
+  </data>
+</odoo>

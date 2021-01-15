@@ -1,0 +1,76 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="convalidaciones.listado_modulo_tree">
+      <field name="name">Listado de modulos</field>
+      <field name="model">convalidaciones.modulo_model</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="name" />
+          <field name="descripcion" />
+          <field name="horas" />
+          <field name="ciclo" />
+          <field name="profesor" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="convalidaciones.modulo_model_form">
+      <field name="name">Formulario de modulos</field>
+      <field name="model">convalidaciones.modulo_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo modulo">
+
+          <sheet>
+
+            <group name="GrupoPadre">
+              <group name="1">
+                <field name="name" />
+                <field name="descripcion" />
+                <field name="horas" />
+                <field name="ciclo" />
+                <field name="profesor" />
+              </group>
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="convalidaciones.list">
+      <field name="name">convalidaciones list</field>
+      <field name="model">convalidaciones.convalidaciones</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="convalidaciones.action_window">
+      <field name="name">convalidaciones window</field>
+      <field name="res_model">convalidaciones.convalidaciones</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.act_window" id="convalidaciones.action_window_modulo">
+      <field name="name">Listado de modulos</field>
+      <field name="res_model">convalidaciones.modulo_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+  </data>
+</odoo>

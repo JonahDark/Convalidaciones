@@ -1,0 +1,77 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="convalidaciones.conva_ciclo_tree">
+      <field name="name">Listado de convalidaciones</field>
+      <field name="model">convalidaciones.conva_model</field>
+      <field name="arch" type="xml">
+
+        <tree>
+          <field name="fecha"/>
+          <field name="modulo_id"/>
+          <field name="alumno_id"/>
+
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="convalidaciones.conva_model_form">
+      <field name="name">Formulario de convalidaciones</field>
+      <field name="model">convalidaciones.conva_model</field>
+      <field name="arch" type="xml">
+
+        <form >
+          <sheet>
+            <group >
+              <field name="fecha"/>
+              <field name="modulo_id"/>
+              <field name="alumno_id"/>
+            </group>
+
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="convalidaciones.list">
+      <field name="name">convalidaciones list</field>
+      <field name="model">convalidaciones.convalidaciones</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="convalidaciones.action_window">
+      <field name="name">convalidaciones window</field>
+      <field name="res_model">convalidaciones.convalidaciones</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.act_window" id="convalidaciones.action_window_conva">
+      <field name="name">Listado de convalidaciones</field>
+      <field name="res_model">convalidaciones.conva_model</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+
+
+
+
+
+  </data>
+</odoo>
